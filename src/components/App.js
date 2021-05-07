@@ -51,7 +51,10 @@ class App extends React.Component {
               })}
             </ul>
 				</div>
-				<Order />
+				<Order 
+					burgers={this.state.burgers}
+					order={this.state.order}
+				/>
 				<MenuAdmin 
 					loadSampleBurgers={this.loadSampleBurgers}
 					addBurger={this.addBurger} />
