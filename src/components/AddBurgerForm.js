@@ -41,13 +41,13 @@ class AddBurgerForm extends React.Component {
 				placeholder='Price' 
 				autoComplete='off' 
 			/>
-			<select 
-				ref={this.statusRef} 
-				name='status' 
+			<select
+				ref={this.statusRef}
+				name='status'
 				className='status'
 			>
-				<option value='avaliable'>Доступно</option>
-				<option value='unavaliable'>Убрать из меню</option>
+				<option value='available'>Доступно</option>
+				<option value='unavailable'>Убрать из меню</option>
 			</select>
 			<textarea
 				ref={this.descRef}

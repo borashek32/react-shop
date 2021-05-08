@@ -108,10 +108,10 @@ class App extends React.Component {
 							{Object.keys(this.state.burgers).map(key => {
 								return (
 								  <Burger
-									key={key}
-									index={key}
-									addToOrder={this.addToOrder}
-									details={this.state.burgers[key]}
+									  key={key}
+									  index={key}
+									  addToOrder={this.addToOrder}
+									  details={this.state.burgers[key]}
 								  />
 								);
 							})}

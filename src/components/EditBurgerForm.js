@@ -47,12 +47,12 @@ class EditBurgerForm extends React.Component {
                 />
                 <select
                     onChange={this.handleChange}
-                    value={this.props.burger.status}
                     name='status'
                     className='status'
+                    value={this.props.burger.status}
                 >
-                    <option value='avaliable'>Доступно</option>
-                    <option value='unavaliable'>Убрать из меню</option>
+                    <option value='available'>Доступно!</option>
+                    <option value='unavailable'>Не доступно!</option>
                 </select>
                 <textarea
                     onChange={this.handleChange}
