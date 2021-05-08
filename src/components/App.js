@@ -13,7 +13,7 @@ class App extends React.Component {
 	};
 
 	componentDidMount() {
-		const { params } = this.props.match.params;
+		const { params } = this.props.match;
     this.ref = base.syncState(`${params.restaurantId}/burgers`, {
       context: this,
       state: 'burgers'

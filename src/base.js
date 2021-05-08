@@ -1,7 +1,7 @@
 import Rebase from 're-base';
-import firebase from 'firebase/app';
+import firebase from 'firebase';
 
-const firebaseApp = firebase.initializeApp90({
+const firebaseApp = firebase.initializeApp({
   apiKey: "AIzaSyCKet1oFBWyjNjzGN5b0-hVyDf0ViV1gPM",
   authDomain: "very-hot-burgers-7a2a2.firebaseapp.com",
   databaseURL: "https://very-hot-burgers-7a2a2-default-rtdb.firebaseio.com",
