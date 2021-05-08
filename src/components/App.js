@@ -3,12 +3,22 @@ import Header from './Header';
 import Order from './Order';
 import Burger from './Burger';
 import MenuAdmin from './MenuAdmin';
-import samoleBurgers from '../sample-burgers';
+import sampleBurgers from '../sample-burgers';
+import {base} from '../base';
 
 class App extends React.Component {
 	state = {
 		burgers: {},
 		order: {}
+	};
+
+	componentDidMount() {
+		const { params } = this.props.match.params;
+    this.ref = base.syncState(`${params.restaurantId}/burgers`, {
+      context: this,
+      state: 'burgers',
+			asArray: true
+    });
 	};
 
 	addBurger = burger => {
@@ -21,7 +31,7 @@ class App extends React.Component {
 	};
 
 	loadSampleBurgers=()=>{
-		this.setState({burgers: samoleBurgers});
+		this.setState({burgers: sampleBurgers});
 	};
 
 	addToOrder = key => {
