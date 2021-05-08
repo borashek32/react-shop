@@ -4,7 +4,7 @@ import Order from './Order';
 import Burger from './Burger';
 import MenuAdmin from './MenuAdmin';
 import sampleBurgers from '../sample-burgers';
-import {base} from '../base';
+import base from '../base';
 
 class App extends React.Component {
 	state = {
@@ -16,8 +16,7 @@ class App extends React.Component {
 		const { params } = this.props.match.params;
     this.ref = base.syncState(`${params.restaurantId}/burgers`, {
       context: this,
-      state: 'burgers',
-			asArray: true
+      state: 'burgers'
     });
 	};
 
